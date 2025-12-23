@@ -15,9 +15,9 @@ public class EmpService implements EmpServiceIn {
 	private static List<Employee> emp = new ArrayList<>();
 
 	public EmpService() {
-		emp.add(new Employee(1, "Mohammad", "Sakinaka"));
-		emp.add(new Employee(2, "AHMAD", "Mumbai"));
-		emp.add(new Employee(3, "Khan", "Wajid Ali"));
+		emp.add(new Employee(1, "Mohammad", "Sakinaka","khanmod@gmail.com","huz123",1232.00,18));
+		emp.add(new Employee(2, "Mohammad", "Sakinaka","khanmod@gmail.com","huz123",1232.00,18));
+		emp.add(new Employee(3, "Mohammad", "Sakinaka","khanmod@gmail.com","huz123",1232.00,18));
 	}
 
 	@Override

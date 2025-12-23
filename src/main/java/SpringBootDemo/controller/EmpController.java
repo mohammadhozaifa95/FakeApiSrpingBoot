@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import SpringBootDemo.ServiceIn.EmpServiceIn;
 import SpringBootDemo.model.Employee;
-import SpringBootDemo.service.EmpService;
+import jakarta.validation.Valid;
 
 @RestController
 public class EmpController {
@@ -28,7 +28,7 @@ return empServiceIn.getAll();
 	
 }
 @PostMapping("/save")
-public Employee saveDta(@RequestBody Employee employee) {
+public Employee saveDta(@Valid @RequestBody Employee employee) {
 return empServiceIn.saveEmp(employee);
 	
 }
@@ -45,7 +45,7 @@ public String delete(@PathVariable("id") int id) {
 	
 }
 @PutMapping("/update")
-public String update(@RequestBody Employee employee) {
+public String update(@Valid @RequestBody Employee employee) {
 	empServiceIn.update(employee);
 	return "Update Success";
 	
